@@ -35,11 +35,11 @@
     float radius = MIN(bounds.size.width, bounds.size.height) / 2.0;
     UIBezierPath *path = [UIBezierPath new];
     //以中心点为圆心，radius为半径，定义一个0-2pi的圆
-    [path addArcWithCenter:center radius:radius startAngle:0 endAngle:M_PI*2 clockwise:YES];
+//    [path addArcWithCenter:center radius:radius startAngle:0 endAngle:M_PI*2 clockwise:YES];
     
-//    for (float currentRadius = radius; currentRadius>0; currentRadius-=20) {
-//        [path addArcWithCenter:center radius:currentRadius startAngle:0 endAngle:M_PI*2 clockwise:YES];
-//    }
+    for (float currentRadius = radius; currentRadius>0; currentRadius-=20) {
+        [path addArcWithCenter:center radius:currentRadius startAngle:0 endAngle:M_PI*2 clockwise:YES];
+    }
     
     path.lineWidth = 10;
     //设置绘制颜色为浅灰色
