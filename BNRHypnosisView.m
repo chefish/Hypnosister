@@ -38,6 +38,7 @@
 //    [path addArcWithCenter:center radius:radius startAngle:0 endAngle:M_PI*2 clockwise:YES];
     
     for (float currentRadius = radius; currentRadius>0; currentRadius-=20) {
+        [path moveToPoint:CGPointMake(center.x+currentRadius, center.y)];
         [path addArcWithCenter:center radius:currentRadius startAngle:0 endAngle:M_PI*2 clockwise:YES];
     }
     
